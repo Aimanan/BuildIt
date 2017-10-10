@@ -16,3 +16,5 @@ D:\telerik\Buildit2\Buildit\Buildit.Data\bin\Debug\Microsoft.AspNet.Identity.Ent
 D:\telerik\Buildit2\Buildit\Buildit.Data\obj\Debug\Buildit.Data.csprojResolveAssemblyReference.cache
 D:\telerik\Buildit2\Buildit\Buildit.Data\obj\Debug\Buildit.Data.dll
 D:\telerik\Buildit2\Buildit\Buildit.Data\obj\Debug\Buildit.Data.pdb
+D:\telerik\Buildit2\Buildit\Buildit.Data\obj\Debug\Buildit.Data.Migrations.Initial_State.resources
+D:\telerik\Buildit2\Buildit\Buildit.Data\obj\Debug\Buildit.Data.csproj.GenerateResource.Cache

@@ -9,10 +9,10 @@ namespace Buildit.Data.Repositories
     public class EfRepository<T> : IEfRepository<T>
         where T : class
     {
-        private readonly IBuilditDbContext dbContext;
+        private readonly DbContext dbContext;
         private readonly IDbSet<T> dbSet;
 
-        public EfRepository(IBuilditDbContext dbContext)
+        public EfRepository(DbContext dbContext)
         {
             if (dbContext == null)
             {

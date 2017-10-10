@@ -62,6 +62,10 @@
     <Compile Include="Contracts\IBuilditDbContext.cs" />
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201710101142535_Initial_State.cs" />
+    <Compile Include="Migrations\201710101142535_Initial_State.Designer.cs">
+      <DependentUpon>201710101142535_Initial_State.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EfRepository.cs" />
@@ -76,6 +80,11 @@
       <Project>{32BFCD83-D39B-4A1A-98F1-9C08274D6B96}</Project>
       <Name>Buildit.Data.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710101142535_Initial_State.resx">
+      <DependentUpon>201710101142535_Initial_State.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

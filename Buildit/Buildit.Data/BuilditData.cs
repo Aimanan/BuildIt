@@ -2,16 +2,16 @@
 using Buildit.Data.Models;
 using Bytes2you.Validation;
 using System;
-
+using System.Data.Entity;
 
 namespace Buildit.Data
 {
     public class BuilditData : IBuilditData
     {
-        private readonly IBuilditDbContext dbContext;
+        private readonly DbContext dbContext;
 
         public BuilditData(
-            IBuilditDbContext dbContext,
+            DbContext dbContext,
             IEfRepository<User> usersRepo,
             IEfRepository<Publication> publicationRepo,
             IEfRepository<PublicationType> TypesRepo,

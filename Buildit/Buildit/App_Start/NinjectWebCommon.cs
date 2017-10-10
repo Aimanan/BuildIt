@@ -20,6 +20,7 @@ namespace Buildit.App_Start
     using Buildit.Services.Contracts;
     using Buildit.Services;
     using Buildit.Common.Providers;
+    using Buildit.Common.Providers.Contracts;
 
     public static class NinjectWebCommon
     {
@@ -72,31 +73,35 @@ namespace Buildit.App_Start
         private static void RegisterServices(IKernel kernel)
         {
 
-            kernel.Bind(x =>
-            {
-                x.FromThisAssembly()
-                 .SelectAllClasses()
-                 .BindDefaultInterface();
-            });
+            //kernel.Bind(x =>
+            //{
+            //    x.FromThisAssembly()
+            //     .SelectAllClasses()
+            //     .BindDefaultInterface();
+            //});
 
-            kernel.Bind(x =>
-            {
-                x.FromAssemblyContaining(typeof(IService))
-                 .SelectAllClasses()
-                 .BindDefaultInterface();
-            });
+            //kernel.Bind(x =>
+            //{
+            //    x.FromAssemblyContaining(typeof(IService))
+            //     .SelectAllClasses()
+            //     .BindDefaultInterface();
+            //});
 
 
             var mapper = new AutoMapperConfig();
             mapper.Execute(Assembly.GetExecutingAssembly());
 
-            kernel.Bind(typeof(DbContext), typeof(BuilditDbContext)).To<BuilditDbContext>().InRequestScope();
-            kernel.Bind(typeof(IEfRepository<>)).To(typeof(EfRepository<>));
+            kernel.Bind(typeof(DbContext)).To<BuilditDbContext>().InRequestScope();
+            kernel.Bind(typeof(IEfRepository<>)).To(typeof(EfRepository<>)).InRequestScope();
             //kernel.Bind<ISaveContext>().To<SaveContext>();
-            kernel.Bind<IMapper>().ToConstant(Mapper.Instance);
-            kernel.Bind<IMapperAdapter>().To<MapperAdapter>();
-            //kernel.Bind<IPublicationService>().To<PublicationService>();
-            kernel.Bind<IBuilditData>().To<BuilditData>();
+            kernel.Bind<IMapper>().ToConstant(Mapper.Instance).InRequestScope();
+            kernel.Bind<IMapperAdapter>().To<MapperAdapter>().InRequestScope();
+            kernel.Bind<ICacheProvider>().To<CacheProvider>().InRequestScope();
+
+            kernel.Bind<IPublicationService>().To<PublicationService>();
+            kernel.Bind<IPublicatioTypeService>().To<PublicationTypeService>();
+            kernel.Bind<IBuilditData>().To<BuilditData>(); 
+            kernel.Bind<HttpContextBase>().ToMethod(ctx=> new HttpContextWrapper(HttpContext.Current)).InRequestScope();
             //kernel.Bind<IMapper>().ToMethod(x => Mapper.Instance).InSingletonScope();
         }
     }

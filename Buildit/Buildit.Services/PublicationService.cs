@@ -3,11 +3,8 @@ using Buildit.Data.Models;
 using Buildit.Services.Contracts;
 using Buildit.Web.Models;
 using Bytes2you.Validation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Buildit.Services
 {
