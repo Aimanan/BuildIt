@@ -1,0 +1,19 @@
+﻿@using Buildit.Web.Models.Search
+@model SearchResultsViewModel
+<div>Results: @Model.PublicationsCount publications</div>
+@foreach (var publ in Model.Publications)
+{
+    <div class="col-md-4 text-center">
+        @Html.DisplayFor(x=> publ)
+    </div>
+}
+<div>
+    <ul class="pagination">
+        @for (int i = 1; i <= Model.Pages; i++)
+            {
+            <li class="@(i == Model.Page ? "active" : "")">
+                <a class="page cursor-pointer" data-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+</div>

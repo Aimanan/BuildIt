@@ -1,0 +1,70 @@
+﻿@using Buildit.Web.Models.Search
+@model SearchViewModel
+@{
+    ViewBag.Title = "Search";
+}
+<div class="container main-content">
+    <!-- start sidebar -->
+    <div class="row">
+        @using (Ajax.BeginForm("SearchPublications", null,
+                new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    UpdateTargetId = "search-results",
+                    InsertionMode = InsertionMode.Replace
+                },
+                new { id = "search-form" }))
+        {
+            <div class="form-group">
+                <input type="text" name="SearchWord" class="form-control inline-block" placeholder="Search" />
+                @*@Html.TextBoxFor(m => m.submitModel.SearchWord, new { @class = "form-control", placeholder = "Search" })*@
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+
+            <ul class="inline-list">
+                <li>Sort : </li>
+                <li>
+                    <input id="sort1" type="radio" name="SortBy" value="title" class="display-none submit-on-checked">
+                    <label for="sort1" class="cursor-pointer">Title</label>
+                </li> |
+                <li>
+                    <input id="sort2" type="radio" name="SortBy" value="publicationType" class="display-none submit-on-checked">
+                    <label for="sort2" class="cursor-pointer">Publication Type</label>
+                </li> |
+                <li>
+                    <input id="sort3" type="radio" name="SortBy" value="author" class="display-none submit-on-checked">
+                    <label for="sort3" class="cursor-pointer">Author</label>
+                </li>
+                <div class="clear"></div>
+            </ul>
+
+            <div class="col-md-3">
+                <div>
+                    <section>
+                        <h4 class="genres-bg">Genres</h4>
+                        <div class="row1">
+                            @foreach (var ptype in Model.PublicationTypes)
+                            {
+                                <div class="checkbox-new">
+                                    <label>
+                                        <input type="checkbox" class="submit-on-checked" name="ChosenPublicationTypesIds" value="@ptype.Id">
+                                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                        @ptype.Name
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                    </section>
+                </div>
+            </div>
+        }
+        <div id="search-results" class="col-md-9">
+            @Html.Action("SearchInitial")
+        </div>
+
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/search")
+}

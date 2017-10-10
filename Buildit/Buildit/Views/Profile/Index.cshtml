@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Profile";
+}
+<div>
+    <div class="card hovercard">
+        <div class="card-background">
+            @*<img class="card-bkimg" alt="" src="~/Content/SiteImages/profile-banner.jpg">*@
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            @*<img alt="" src="~/Content/SiteImages/profile-icon.png">*@
+        </div>
+        @*<div class="card-info">*@
+        <h2 class="card-info text-center text-uppercase">@(User.Identity.GetUserName())</h2>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a href="#1" data-toggle="tab" class="text-bold">Useful</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab" class="text-bold">Not useful</a>
+            </li>
+            <li>
+                <a href="#3" data-toggle="tab" class="text-bold">Not interested</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <h3>Useful</h3>
+            </div>
+            <div class="tab-pane" id="2">
+                <h3>Not useful</h3>
+            </div>
+            <div class="tab-pane" id="3">
+                <h3>Not interestedg</h3>
+            </div>
+        </div>
+    </div>
+</div>
+

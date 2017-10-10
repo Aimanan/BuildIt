@@ -1,0 +1,42 @@
+﻿@using Buildit.Web.Models
+@model IEnumerable <PublicationViewModel>
+@{
+    ViewBag.Title = "BuildIt";
+}
+<div class="banner">
+    <div class="container">
+        <div class="banner_desc">
+            <h1>BuildIt</h1>
+            <h2>Information abaot all building specialists</h2>
+            <div class="button">
+                <a href="~/search" class="hvr-shutter-out-horizontal">Browse publications</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content_top">
+    <h3 class="m_1">Most Popular</h3>
+    <div class="container">
+        <div class="text-center row">
+            @foreach (var publ in Model)
+            {
+                <div class="col-md-3">
+                    @Html.DisplayFor(x=>publ)
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="about-block-content">
+                <div class="border-add"></div>
+                <h4>About Buildit</h4>
+                <p>Find your information here</p>
+                <p>Join Buildit now!.</p>
+                <p> </p>
+            </div>
+        </div>
+        @*<div class="row">
+            <img src="~/Content/SiteImages/booksbanner.png" class="img-responsive" alt="" />
+        </div>*@
+        <div class="clearfix"></div>
+    </div>
+</div>
