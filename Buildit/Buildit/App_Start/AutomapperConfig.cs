@@ -70,7 +70,7 @@ namespace Buildit.App_Start
     {
         public static IMapperConfigurationExpression Configuration { get; private set; }
 
-        public void Execute(Assembly assembly)
+        public static void Execute(Assembly assembly)
         {
             Mapper.Initialize(
                 cfg =>

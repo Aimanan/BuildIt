@@ -2,13 +2,15 @@
 using Buildit.Data.Models;
 using Buildit.Services.Contracts;
 using Buildit.Web.Models;
+using Buildit.Web.Models.Admin;
 using Bytes2you.Validation;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 
 namespace Buildit.Services
 {
-    public class PublicationService : IPublicationService
+    public class PublicationService : IPublicationService, IService
     {
         private readonly IBuilditData data;
 
@@ -38,8 +40,18 @@ namespace Buildit.Services
                 Picture = fileName
             };
 
-            this.data.Publications.Add(publication);
-            this.data.SaveChanges();
+            //try
+            //{
+                this.data.Publications.Add(publication);
+                this.data.SaveChanges();
+            //}
+            //catch (DbEntityValidationException ex)
+            //{
+            //    var myex = ex;
+
+            //    throw;
+            //}
+            
 
             return publication.Id;
         }
@@ -54,6 +66,16 @@ namespace Buildit.Services
             return publications;
         }
 
+        public Publication GetById(int id)
+        {
+            var publication = this.data.Publications.All
+                .Where(x => x.Id == id)
+                //.Include(x => x.PublicationType)
+                .FirstOrDefault();
+
+            return publication;
+        }
+        //??? to fix the bug
 
         public double GetPublicationRating(int id)
         {
@@ -75,18 +97,7 @@ namespace Buildit.Services
         {
             var publications = this.BuildFilterQuery(searchWord, publicationTypeIds);
             return publications.Count();
-        }
-
-
-        public Publication GetById(int id)
-        {
-            var publication = this.data.Publications.All
-                .Where(x => x.Id == id)
-                //.Include(x => x.PublicationType)
-                .FirstOrDefault();
-
-            return publication;
-        }
+        }      
 
         public IEnumerable<Publication> SearchPublications(string searchWord, IEnumerable<int> publicationTypeIds, string orderProperty, int page = 1, int publicationsPerPage = 9)
         {

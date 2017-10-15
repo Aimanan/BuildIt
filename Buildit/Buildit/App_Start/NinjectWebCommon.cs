@@ -80,29 +80,32 @@ namespace Buildit.App_Start
             //     .BindDefaultInterface();
             //});
 
-            //kernel.Bind(x =>
-            //{
-            //    x.FromAssemblyContaining(typeof(IService))
-            //     .SelectAllClasses()
-            //     .BindDefaultInterface();
-            //});
+            kernel.Bind(x =>
+            {
+                x.FromAssemblyContaining(typeof(IService))
+                 .SelectAllClasses()
+                 .BindDefaultInterface();
+            });
 
 
-            var mapper = new AutoMapperConfig();
-            mapper.Execute(Assembly.GetExecutingAssembly());
+            //var mapper = new AutoMapperConfig();
+            //mapper.Execute(Assembly.GetExecutingAssembly());
 
             kernel.Bind(typeof(DbContext)).To<BuilditDbContext>().InRequestScope();
             kernel.Bind(typeof(IEfRepository<>)).To(typeof(EfRepository<>)).InRequestScope();
             //kernel.Bind<ISaveContext>().To<SaveContext>();
-            kernel.Bind<IMapper>().ToConstant(Mapper.Instance).InRequestScope();
+            //kernel.Bind<IMapper>().ToConstant(Mapper.Instance).InRequestScope();
             kernel.Bind<IMapperAdapter>().To<MapperAdapter>().InRequestScope();
             kernel.Bind<ICacheProvider>().To<CacheProvider>().InRequestScope();
+            kernel.Bind<IUserProvider>().To<UserProvider>().InRequestScope();
+            kernel.Bind<IServerProvider>().To<ServerProvider>().InRequestScope();
 
-            kernel.Bind<IPublicationService>().To<PublicationService>();
-            kernel.Bind<IPublicatioTypeService>().To<PublicationTypeService>();
+            //kernel.Bind<IPublicationService>().To<PublicationService>();
+            //kernel.Bind<IPublicatioTypeService>().To<PublicationTypeService>();
             kernel.Bind<IBuilditData>().To<BuilditData>(); 
             kernel.Bind<HttpContextBase>().ToMethod(ctx=> new HttpContextWrapper(HttpContext.Current)).InRequestScope();
-            //kernel.Bind<IMapper>().ToMethod(x => Mapper.Instance).InSingletonScope();
+            
+            kernel.Bind<IMapper>().ToMethod(x => Mapper.Instance).InSingletonScope();
         }
     }
 }

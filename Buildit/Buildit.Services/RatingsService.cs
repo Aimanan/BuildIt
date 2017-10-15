@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Buildit.Services
 {
-    public class RatingsService : IRatingsService
+    public class RatingsService : IRatingsService, IService
     {
         private readonly IBuilditData data;
 

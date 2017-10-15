@@ -1,0 +1,25 @@
+﻿@using Buildit.Web.Models.AdditionalInfo
+@model RatingViewModel
+@{
+    var displayNone = Model.UserRating == 0;
+}
+
+<div class="rating-block row">
+    @if (this.User.Identity.IsAuthenticated)
+    {
+        <p class="text-danger" id="rating-error"></p>
+        <div id="star-rating" class="stars" data-checked="@Model.RatingCalculated" data-id="@Model.Id">
+            <input type="radio" name="rating" class="rating" value="1" />
+            <input type="radio" name="rating" class="rating" value="2" />
+            <input type="radio" name="rating" class="rating" value="3" />
+            <input type="radio" name="rating" class="rating" value="4" />
+            <input type="radio" name="rating" class="rating" value="5" />
+        </div>
+        <div id="rating-calc" class="text-bold rating-info">@(string.Format("{0:F3}", Model.RatingCalculated))</div>
+        <div id="user-rating" class="@(displayNone ? "display-none" : "")">You gave this publication <span>@Model.UserRating</span> stars</div>
+    }
+    else
+    {
+        <div>Rating: <span class="text-bold">@(string.Format("{0:F3}", Model.RatingCalculated))</span></div>
+    }
+</div>

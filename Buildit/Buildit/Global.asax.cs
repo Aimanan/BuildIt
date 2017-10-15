@@ -1,9 +1,11 @@
-﻿using Buildit.Data;
+﻿using Buildit.App_Start;
+using Buildit.Data;
 using Buildit.Data.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -23,7 +25,7 @@ namespace Buildit
             //BuilditDbContext.Create().Database.Initialize(true);
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BuilditDbContext, Configuration>());
 
-            //AutoMapperConfig.Config(Assembly.Load(Constants.ViewModelsAssembly));
+            AutoMapperConfig.Execute(Assembly.Load("Buildit.Web.Models"));
 
             //ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());

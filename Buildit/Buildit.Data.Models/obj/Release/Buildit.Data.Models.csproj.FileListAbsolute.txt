@@ -1,0 +1,15 @@
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Buildit.Data.Models.dll.config
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Buildit.Data.Models.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Buildit.Data.Models.pdb
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Bytes2you.Validation.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\EntityFramework.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\EntityFramework.SqlServer.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\EntityFramework.xml
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\EntityFramework.SqlServer.xml
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\obj\Release\Buildit.Data.Models.csprojResolveAssemblyReference.cache
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\obj\Release\Buildit.Data.Models.dll
+D:\telerik\Buildit3\Buildit\Buildit.Data.Models\obj\Release\Buildit.Data.Models.pdb

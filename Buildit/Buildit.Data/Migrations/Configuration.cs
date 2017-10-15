@@ -53,29 +53,33 @@ namespace Buildit.Data.Migrations
                 userManager.AddToRole(user.Id, roleName);
             }
         }
+
+        //private void SeedSampleData(BuilditDbContext context)
+        //{
+        //    if (!context.Publications.Any())
+        //    {
+        //        for (int i = 0; i < 10; i++)
+        //        {
+        //            var publ = new Publication()
+        //            {
+        //                Id = i,
+        //                Title = "Saint-Laurent Sports Complex / Saucier + Perrotte architectes + HCMA ",
+        //                Content = "From the architect. The project site is situated between the existing Émile Legault School and Raymond Bourque Arena, both of which are horizontal in form and neutral in character. For this project, it thus became vital for the design of new sports complex to create a visual and physical link between the Marcel Laurin Park (to the north of the site), and the projected green band that will run along Thimens Boulevard. The sculptural nature of the project creates a strong link between these two natural elements in the urban fabric.Two angular objects — one prismatic, white and diaphanous, the other darker and stretched horizontally — embrace the specific programmatic functions of the project but simultaneously transcend these,ninviting users and passersby from the boulevard, while serving as a signal for the passage toward the park beyond.",
+
+        //                Author = "Saucier + Perrotte architectes + HCMA",
+        //                PublishedOn = DateTime.Now,
+        //                Description = "Sports Complex",
+        //                Picture="NO PICTURE",
+
+        //            };
+
+        //            context.Publications.Add(publ);
+        //        }
+
+        //    }
+        //}
     }
 }
 
 
 
-
-//        private void SeedSampleData(BuilditDbContext context)
-//        {
-//            if (!context.Publications.Any())
-//            {
-//                for (int i = 0; i < 5; i++)
-//                {
-//                    var post = new Publication()
-//                    {
-//                        Title = "Post " + i,
-//                        Content = "Text sample blq blq blq",
-//                        Author = context.Users.First(x => x.Email == AdministratorUserName),
-//                        //CreatedOn = DateTime.Now
-//                    };
-
-//                    context.Publication.Add(post);
-//                }
-//            }
-//        }
-//    }
-//}

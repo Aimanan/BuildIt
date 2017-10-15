@@ -7,7 +7,7 @@ using Buildit.Data.Models;
 
 namespace Buildit.Services
 {
-    public class UsersService : IUsersService
+    public class UsersService : IUsersService, IService
     {
         private readonly IBuilditData data;
         private readonly IEfRepository<User> userRepository;

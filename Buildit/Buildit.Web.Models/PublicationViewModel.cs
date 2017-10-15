@@ -16,6 +16,10 @@ namespace Buildit.Web.Models
 
         public string Author { get; set; }
 
+        public string Description { get; set; }
+
+        public DateTime PublishedOn { get; set; }
+
         public string Content { get; set; }
 
         public string Picture { get; set; }

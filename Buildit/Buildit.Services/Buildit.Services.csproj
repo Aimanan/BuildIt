@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IPublicationService.cs" />
-    <Compile Include="Contracts\IPublicatioTypeService.cs" />
+    <Compile Include="Contracts\IPublicationTypeService.cs" />
     <Compile Include="Contracts\IRatingsService.cs" />
     <Compile Include="Contracts\IService.cs" />
     <Compile Include="Contracts\IUsersService.cs" />

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Buildit.Areas.Admin
+namespace Buildit.Areas.Admin.Controllers
 {
     public class AdminAreaRegistration : AreaRegistration
     {

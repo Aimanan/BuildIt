@@ -70,3 +70,9 @@ D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\System.Web.WebPages.Depl
 D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\obj\Debug\Buildit.Web.Tests.csprojResolveAssemblyReference.cache
 D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\obj\Debug\Buildit.Web.Tests.dll
 D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\obj\Debug\Buildit.Web.Tests.pdb
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Ninject.Extensions.Conventions.dll
+D:\telerik\Buildit3\Buildit\Buildit.Web.Tests\bin\Debug\Ninject.Extensions.Conventions.xml

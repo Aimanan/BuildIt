@@ -1,5 +1,6 @@
 ﻿using Buildit.Data.Contracts;
 using Buildit.Data.Models;
+using Buildit.Services.Contracts;
 using Bytes2you.Validation;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Buildit.Services
 {
-    public class PublicationTypeService: IPublicatioTypeService
+    public class PublicationTypeService: IPublicationTypeService, IService
     {
         private readonly IBuilditData data;
 

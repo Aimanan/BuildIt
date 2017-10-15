@@ -14,11 +14,11 @@ namespace Buildit.Data.Models
         public string UserId { get; set; }
 
         [Key, Column(Order = 1)]
-        public int BookId { get; set; }
+        public int PublicationId { get; set; }
 
         public virtual User User { get; set; }
 
-        public virtual Publication BoPublicationok { get; set; }
+        public virtual Publication Publication { get; set; }
 
         public PublicationRate PublicationRate { get; set; }
     }

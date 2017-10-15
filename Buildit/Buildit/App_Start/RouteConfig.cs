@@ -13,15 +13,15 @@ namespace Buildit
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-               name: "Rate",
-               url: "publication/rate",
-               defaults: new { controller = "Publication", action = "Rate" });
+            //routes.MapRoute(
+            //   name: "Rate",
+            //   url: "publication/rate",
+            //   defaults: new { controller = "Publication", action = "Rate" });
 
-            routes.MapRoute(
-               name: "Publication",
-               url: "publication/{id}",
-               defaults: new { controller = "Publication", action = "Index" });
+            //routes.MapRoute(
+            //   name: "Publication",
+            //   url: "publication/details/{id}",
+            //   defaults: new { controller = "Publication", action = "Details" });
 
             routes.MapRoute(
                 name: "Default",

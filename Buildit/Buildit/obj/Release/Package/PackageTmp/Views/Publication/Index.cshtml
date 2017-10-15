@@ -1,0 +1,56 @@
+﻿@*@using System.Globalization
+@using Buildit.Web.Models.AdditionalInfo
+@model PublicationDetailsViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+@section styles{
+    <link rel="stylesheet" href="@Url.Content("~/Content/rating.css")" />
+}
+<div class="container single_top main-content">
+    @if (TempData["Addition"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Addition"]
+        </div>
+    }
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img-responsive publication-details-img" src="@Url.Content($"~/Content/Images/{Model.Picture}")" alt="@Model.Title" />
+        </div>
+        <div class="col-md-9">
+            <h1>@Model.Title</h1>
+            <h3>@Model.Author</h3>
+            <p class="publication-description">@Model.Description</p>
+            <h3>@Model.Content</h3>
+            <p id="publication-content" class="pre-scrollable">@Model.Content</p>
+            <h5>@Model.PublicationType</h5>
+            <p>Published on: @Model.PublishedOn.ToString("dd/MMMM/yyyy", CultureInfo.InvariantCulture)</p>
+
+            @Html.Action("GetRatingPartial", new { id = Model.Id })
+            @if (this.User.Identity.IsAuthenticated)
+            {
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Useful</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Useful</a></li>
+                        <li><a class="dropdown-item" href="#">Unuseful</a></li>
+                        <li><a class="dropdown-item" href="#">NotInterested</a></li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@if (this.User.Identity.IsAuthenticated)
+{
+    @section scripts{
+        @Scripts.Render("~/bundles/ratings");
+    }
+}*@

@@ -6,6 +6,7 @@ using Buildit.Web.Models.AdditionalInfo;
 using Buildit.Common.Providers.Contracts;
 using Buildit.Attributes;
 using Buildit.Common.Providers;
+using Buildit.Web.Models;
 
 namespace Buildit.Controllers
 {
@@ -29,21 +30,30 @@ namespace Buildit.Controllers
             this.userProvider = userProvider;
         }
 
-        public ActionResult Index(int id)
+        //public ActionResult Index(int id)
+        //{
+        //    var publication = this.publicationService.GetById(id);
+
+        //    if (publication == null)
+        //    {
+        //        return this.View("publicationError");
+        //    }
+
+        //    var publicationViewModel = this.mapper.Map<PublicationDetailsViewModel>(publication);
+
+        //    return this.View(publicationViewModel);
+        //}
+
+        public ActionResult Details(int id)
         {
-            var publication = this.publicationService.GetById(id);
+            var model = this.publicationService.GetById(id);
 
-            if (publication == null)
-            {
-                return this.View("publicationError");
-            }
+            var viewModel = this.mapper.Map<PublicationViewModel>(model);
 
-            var publicationViewModel = this.mapper.Map<PublicationAdditionlInfoViewModel>(publication);
-
-            return this.View(publicationViewModel);
+            return this.View(viewModel);
         }
 
-        [ChildActionOnly]
+        //[ChildActionOnly]
         public PartialViewResult GetRatingPartial(int id)
         {
             var rating = this.publicationService.GetPublicationRating(id);

@@ -22,7 +22,8 @@ namespace Buildit.Common.Providers
 
         public const int TopPublicationsCount = 8;
         public const string TopPublicationsCache = "topPublications";
-        public const int TopPublicationsExpirationInMinutes = 10;
+        // TODO: Change
+        public const int TopPublicationsExpirationInMinutes = 0;
 
         public const int MinRating = 1;
         public const int MaxRating = 5;

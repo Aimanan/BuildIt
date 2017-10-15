@@ -16,11 +16,11 @@ namespace Buildit.Controllers
     public class SearchController : Controller
     {
         private readonly IPublicationService publicationService;
-        private readonly IPublicatioTypeService publTypeService;
+        private readonly IPublicationTypeService publTypeService;
         private readonly IMapperAdapter mapper;
 
         public SearchController(IPublicationService publicationService,
-            IPublicatioTypeService publTypeService,
+            IPublicationTypeService publTypeService,
             IMapperAdapter mapper)
         {
             Guard.WhenArgument(publicationService, "PublicationService").IsNull().Throw();
@@ -52,7 +52,7 @@ namespace Buildit.Controllers
 
         [HttpPost]
         [AjaxOnly]
-        public PartialViewResult SearchBooks(SearchViewResultModel searchModel, int? page)
+        public PartialViewResult SearchPublications(SearchViewResultModel searchModel, int? page)
         {
             int actualPage = page ?? 1;
 

@@ -1,0 +1,14 @@
+﻿@*@using Buildit.Web.Models.AdditionalInfo
+@model PublicationDetailsViewModel*@
+
+@using Buildit.Web.Models
+@model PublicationViewModel
+
+@*<h1>@Model.Picture</h1>
+<h1>@Model.Content</h1>*@
+
+
+<div class="col-md-9">
+    @Html.Partial("_PublicationViewModel", Model)
+</div>
+            }

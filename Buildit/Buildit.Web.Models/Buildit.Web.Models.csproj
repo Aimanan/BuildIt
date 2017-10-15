@@ -71,7 +71,7 @@
   <ItemGroup>
     <Compile Include="AdditionalInfo\RatingViewModel.cs" />
     <Compile Include="Admin\AddPublicationViewModel.cs" />
-    <Compile Include="AdditionalInfo\PublicationAdditionlInfoViewModel.cs" />
+    <Compile Include="AdditionalInfo\PublicationDetailsViewModel.cs" />
     <Compile Include="Contracts\ICustomMappings.cs" />
     <Compile Include="Contracts\IMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
