@@ -53,10 +53,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/11/2017 16:11:32</publishTime>
     </File>
     <File Include="bin/Buildit.dll">
-      <publishTime>10/15/2017 15:25:28</publishTime>
+      <publishTime>10/15/2017 18:17:16</publishTime>
     </File>
     <File Include="bin/Buildit.pdb">
-      <publishTime>10/15/2017 15:25:28</publishTime>
+      <publishTime>10/15/2017 18:17:16</publishTime>
     </File>
     <File Include="bin/Buildit.Services.dll">
       <publishTime>10/15/2017 04:26:39</publishTime>
@@ -536,10 +536,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/15/2017 01:49:16</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>10/14/2017 22:43:48</publishTime>
+      <publishTime>10/15/2017 17:37:39</publishTime>
     </File>
     <File Include="Content/style.css">
       <publishTime>10/15/2017 01:34:11</publishTime>
+    </File>
+    <File Include="Content/test.css">
+      <publishTime>10/15/2017 18:18:35</publishTime>
     </File>
     <File Include="Content/_bootstrap-datetimepicker.less">
       <publishTime>10/15/2017 01:50:35</publishTime>
@@ -692,7 +695,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/10/2017 00:34:27</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>09/10/2017 14:42:03</publishTime>
+      <publishTime>10/15/2017 17:14:51</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>10/15/2017 01:25:36</publishTime>
@@ -719,7 +722,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/14/2017 22:15:48</publishTime>
     </File>
     <File Include="Views/Publication/Details.cshtml">
-      <publishTime>10/15/2017 04:26:36</publishTime>
+      <publishTime>10/15/2017 17:14:51</publishTime>
     </File>
     <File Include="Views/Publication/Index.cshtml">
       <publishTime>10/15/2017 05:39:41</publishTime>
@@ -761,7 +764,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2017 14:42:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/15/2017 15:25:30</publishTime>
+      <publishTime>10/15/2017 18:17:16</publishTime>
     </File>
   </ItemGroup>
 </Project>
