@@ -35,6 +35,7 @@ namespace Buildit.Services
             }
         }
 
+        //TODO _RatingPartitial
         public void RatePublication(int publId, string userId, int rate)
         {
             var rating = this.data.Ratings.All

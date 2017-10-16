@@ -75,23 +75,7 @@ namespace Buildit.Services
 
             return publication;
         }
-        //??? to fix the bug
-
-        public double GetPublicationRating(int id)
-        {
-            var publication = this.data.Publications.All
-                .Where(x => x.Id == id)
-                .FirstOrDefault();
-
-            if (publication != null)
-            {
-                return publication.RatingCalculated;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+        //TODO fix the bug
 
         public int GetPublicationsCount(string searchWord, IEnumerable<int> publicationTypeIds)
         {

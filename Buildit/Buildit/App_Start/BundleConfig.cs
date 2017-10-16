@@ -21,15 +21,16 @@ namespace Buildit
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/moment.js",
                       "~/Scripts/bootstrap-datetimepicker.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/signalr").Include(
                       "~/Scripts/jquery.signalR*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/ratings").Include(
-                      "~/Scripts/jquery.rateyo.js",
-                      "~/Scripts/Common/rating.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/ratings").Include(
+            //          "~/Scripts/jquery.rateyo.js",
+            //          "~/Scripts/Common/rating.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -40,6 +41,7 @@ namespace Buildit
                     "~/Scripts/Common/chat.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/date").Include(
+                    "~/Scripts/moment.js",
                     "~/Scripts/Common/dateTimePicker"));
 
         }

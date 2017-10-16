@@ -121,6 +121,11 @@ D:\telerik\Buildit2\Buildit\Buildit\bin\Microsoft.AspNet.SignalR.Core.dll
 D:\telerik\Buildit2\Buildit\Buildit\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 D:\telerik\Buildit2\Buildit\Buildit\bin\Microsoft.AspNet.SignalR.Core.xml
 D:\telerik\Buildit2\Buildit\Buildit\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\VBCSCompiler.exe
 D:\telerik\Buildit3\Buildit\Buildit\bin\ApplicationInsights.config
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\csc.exe
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\csc.exe.config
@@ -128,13 +133,9 @@ D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\csc.rsp
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\csi.exe
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\csi.rsp
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\Microsoft.VisualBasic.Core.targets
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\System.AppContext.dll
@@ -146,7 +147,6 @@ D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\System.Reflection.Metadata.dll
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\vbc.exe
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\vbc.exe.config
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\vbc.rsp
-D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\VBCSCompiler.exe
 D:\telerik\Buildit3\Buildit\Buildit\bin\roslyn\VBCSCompiler.exe.config
 D:\telerik\Buildit3\Buildit\Buildit\bin\Buildit.dll.config
 D:\telerik\Buildit3\Buildit\Buildit\bin\Buildit.dll

@@ -19,8 +19,6 @@ namespace Buildit.Services.Contracts
 
         int GetPublicationsCount(string searchWord, IEnumerable<int> publicationTypeIds);
 
-        double GetPublicationRating(int id);
-
         Publication GetById(int id);
 
         IEnumerable<Publication> SearchPublications(string searchWord, IEnumerable<int> publicationTypeIds, string orderProperty, int page = 1, int numberOfPages = 9);      

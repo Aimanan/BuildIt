@@ -13,9 +13,9 @@ namespace Buildit.Services.Contracts
 
         User GetById(string id);
 
-        void BanUser(string userId);
+        //void BanUser(string userId);
 
-        void UnbanUser(string userId);
+        //void UnbanUser(string userId);
 
     }
 }

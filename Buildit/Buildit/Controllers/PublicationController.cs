@@ -52,38 +52,5 @@ namespace Buildit.Controllers
 
             return this.View(viewModel);
         }
-
-        //[ChildActionOnly]
-        public PartialViewResult GetRatingPartial(int id)
-        {
-            var rating = this.publicationService.GetPublicationRating(id);
-
-            string userId = this.userProvider.GetUserId();
-            var userRating = this.ratingsService.GetRating(id, userId);
-
-            var ratingModel = new RatingViewModel()
-            {
-                Id = id,
-                RatingCalculated = rating,
-                UserRating = userRating
-            };
-
-            return this.PartialView("_RatingPartial", ratingModel);
-        }
-
-        [Authorize]
-        [AjaxOnly]
-        public JsonResult Rate(int id, int rate)
-        {
-            if (rate < Constants.MinRating || Constants.MaxRating < rate)
-            {
-                return this.Json(new { error = true, message = Constants.RatingErrorMessage }, JsonRequestBehavior.AllowGet);
-            }
-            var userId = this.userProvider.GetUserId();
-            this.ratingsService.RatePublication(id, userId, rate);
-            var rating = this.publicationService.GetPublicationRating(id);
-
-            return this.Json(new { success = true, rating = rating }, JsonRequestBehavior.AllowGet);
-        }
     }
 }

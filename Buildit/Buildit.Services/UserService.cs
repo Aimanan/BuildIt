@@ -7,13 +7,13 @@ using Buildit.Data.Models;
 
 namespace Buildit.Services
 {
-    public class UsersService : IUsersService, IService
+    public class UserService : IUsersService, IService
     {
         private readonly IBuilditData data;
         private readonly IEfRepository<User> userRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public UsersService(IBuilditData data,
+        public UserService(IBuilditData data,
             IEfRepository<User> userRepository,
             IUnitOfWork unitOfWork)
         {
@@ -32,39 +32,36 @@ namespace Buildit.Services
             return exists;
         }
 
+        //public void BanUser(string userId)
+        //{
+        //    var user = this.userRepository
+        //        .All
+        //        .Where(x => x.Id == userId)
+        //        .FirstOrDefault();
+
+        //    user.IsBanned = true;
+        //    this.userRepository.Update(user);
+        //    this.unitOfWork.Commit();
+
+        //}
+
+        //public void UnbanUser(string userId)
+        //{
+        //    var user = this.userRepository
+        //        .All
+        //        .Where(x => x.Id == userId)
+        //        .FirstOrDefault();
+
+        //    user.IsBanned = false;
+        //    this.userRepository.Update(user);
+        //    this.unitOfWork.Commit();
+        //}
+
         public User GetById(string id)
         {
-            var user = this.userRepository
-                .All
-                .Where(x => x.Id == id)
-                .FirstOrDefault();
+            var user = this.userRepository.GetById(id);
 
             return user;
-        }
-
-        public void BanUser(string userId)
-        {
-            var user = this.userRepository
-                .All
-                .Where(x => x.Id == userId)
-                .FirstOrDefault();
-
-            user.IsBanned = true;
-            this.userRepository.Update(user);
-            this.unitOfWork.Commit();
-
-        }
-
-        public void UnbanUser(string userId)
-        {
-            var user = this.userRepository
-                .All
-                .Where(x => x.Id == userId)
-                .FirstOrDefault();
-
-            user.IsBanned = false;
-            this.userRepository.Update(user);
-            this.unitOfWork.Commit();
         }
     }
 }

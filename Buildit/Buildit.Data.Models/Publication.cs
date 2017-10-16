@@ -62,22 +62,5 @@ namespace Buildit.Data.Models
             get { return this.uerPublications; }
             set { this.uerPublications = value; }
         }
-
-        [NotMapped]
-        public virtual double RatingCalculated
-        {
-            get
-            {
-                var count = this.Ratings.Count;
-                if (count > 0)
-                {
-                    return this.Ratings.Sum(x => x.Value) / (double)count;
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }
     }
 }
