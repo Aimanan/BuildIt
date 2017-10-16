@@ -849,14 +849,6 @@ ul.single_social {
     margin-top: 8px;
 }
 
-ul.single_social li a {
-    color: #000;
-}
-
-    ul.single_social li a:hover {
-        display: block;
-        color: #fd926d;
-    }
 
 .menu_drop {
     width: auto;
